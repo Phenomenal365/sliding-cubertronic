@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://da5qcxjjl65j3"]
+
+[ext_resource type="Texture2D" uid="uid://drm5gcfk7qyx7" path="res://assests/gimmicks/button.png" id="1_gsvb0"]
+[ext_resource type="Script" uid="uid://cmk75efwxbghe" path="res://scripts/button.gd" id="2_1ixy0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e3dey"]
+texture = ExtResource("1_gsvb0")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_s8syx"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_e3dey")
+
+[node name="button" type="TileMap" unique_id=233733876]
+tile_set = SubResource("TileSet_s8syx")
+format = 2
+script = ExtResource("2_1ixy0")

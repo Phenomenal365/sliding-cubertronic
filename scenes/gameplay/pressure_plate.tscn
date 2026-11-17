@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c0k8lmmx5ryl3"]
+
+[ext_resource type="Texture2D" uid="uid://pt5vfvpo42ge" path="res://assests/gimmicks/key_pressure_plate.png" id="1_ejqdd"]
+[ext_resource type="Script" uid="uid://b0y5manwh1ybc" path="res://scripts/pressure_plate.gd" id="2_ejqdd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b55o2"]
+texture = ExtResource("1_ejqdd")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_b55o2"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_b55o2")
+
+[node name="pressure plate" type="TileMap" unique_id=1518087687 groups=["gimmick_maps", "universal_gimmick_maps"]]
+tile_set = SubResource("TileSet_b55o2")
+format = 2
+script = ExtResource("2_ejqdd")

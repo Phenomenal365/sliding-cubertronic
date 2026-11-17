@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://yv58ia0080nu"]
+
+[ext_resource type="Texture2D" uid="uid://dnh7cp8jeqetu" path="res://assests/gimmicks/skull-1.png.png" id="1_tvfin"]
+[ext_resource type="Script" uid="uid://dtvgum1bhfyla" path="res://scripts/death.gd" id="2_3vasa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3vasa"]
+texture = ExtResource("1_tvfin")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ue5b2"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_3vasa")
+
+[node name="death" type="TileMap" unique_id=1256854054 groups=["gimmick_maps"]]
+tile_set = SubResource("TileSet_ue5b2")
+format = 2
+script = ExtResource("2_3vasa")

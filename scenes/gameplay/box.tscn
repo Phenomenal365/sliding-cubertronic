@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://clmy8i7801ume"]
+
+[ext_resource type="Script" uid="uid://5frfiu0w3afp" path="res://scripts/box.gd" id="1_q1axm"]
+[ext_resource type="Texture2D" uid="uid://bvw6ahayrwuei" path="res://assests/box/Box-1.png.png" id="2_0tb5w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dq75e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0tb5w")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyao3"]
+size = Vector2(64, 64)
+
+[node name="box" type="CharacterBody2D" unique_id=789120472 groups=["sliding_entities"]]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_q1axm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=625135201]
+sprite_frames = SubResource("SpriteFrames_dq75e")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=696711737]
+shape = SubResource("RectangleShape2D_pyao3")

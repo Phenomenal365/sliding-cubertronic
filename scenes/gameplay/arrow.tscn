@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b7vgxjod5qff1"]
+
+[ext_resource type="Texture2D" uid="uid://b05dbd0oo52dr" path="res://assests/gimmicks/Arrow_Down-1.png.png" id="1_prl6t"]
+[ext_resource type="Texture2D" uid="uid://b1q5n26aq5f24" path="res://assests/gimmicks/Arrow_Left-1.png.png" id="2_3g44x"]
+[ext_resource type="Texture2D" uid="uid://b3rsnjycf8xms" path="res://assests/gimmicks/Arrow_Right-1.png.png" id="3_11s4t"]
+[ext_resource type="Texture2D" uid="uid://pngatqp1r6be" path="res://assests/gimmicks/Arrow_Up-1.png.png" id="4_mx7vp"]
+[ext_resource type="Script" uid="uid://0g2pdae7o1jr" path="res://scripts/arrow.gd" id="5_55uqt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g74x8"]
+texture = ExtResource("1_prl6t")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3pep8"]
+texture = ExtResource("2_3g44x")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4yhie"]
+texture = ExtResource("3_11s4t")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4a0s"]
+texture = ExtResource("4_mx7vp")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_35nlv"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_g74x8")
+sources/1 = SubResource("TileSetAtlasSource_3pep8")
+sources/2 = SubResource("TileSetAtlasSource_4yhie")
+sources/3 = SubResource("TileSetAtlasSource_a4a0s")
+
+[node name="arrow" type="TileMap" unique_id=471651168 groups=["gimmick_maps", "universal_gimmick_maps"]]
+tile_set = SubResource("TileSet_35nlv")
+format = 2
+script = ExtResource("5_55uqt")

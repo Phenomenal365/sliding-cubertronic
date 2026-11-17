@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://srvop5uqmqgk"]
+
+[ext_resource type="Texture2D" uid="uid://cdshqyaopa8mc" path="res://assests/gimmicks/Electricity-1.png.png" id="1_dope7"]
+[ext_resource type="Script" uid="uid://dtvgum1bhfyla" path="res://scripts/death.gd" id="2_kllb2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kllb2"]
+texture = ExtResource("1_dope7")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xjlp1"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_kllb2")
+
+[node name="electricity" type="TileMap" unique_id=1543217180 groups=["gimmick_maps"]]
+z_index = 3
+tile_set = SubResource("TileSet_xjlp1")
+format = 2
+script = ExtResource("2_kllb2")

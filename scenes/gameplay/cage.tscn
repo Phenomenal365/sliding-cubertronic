@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bor3pjlcol2l3"]
+
+[ext_resource type="Texture2D" uid="uid://74ekgsiplk8h" path="res://assests/gimmicks/cage.png" id="1_hago6"]
+[ext_resource type="Texture2D" uid="uid://dgperoh4x22xd" path="res://assests/gimmicks/cage_close.png" id="2_pi4rq"]
+[ext_resource type="Script" uid="uid://dhdqg2kurapl6" path="res://scripts/cage.gd" id="3_sro4x"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72sy2"]
+texture = ExtResource("2_pi4rq")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ytnhe"]
+texture = ExtResource("1_hago6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_j0p4r"]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_ytnhe")
+sources/0 = SubResource("TileSetAtlasSource_72sy2")
+
+[node name="cage" type="TileMap" unique_id=765014981 groups=["gimmick_maps", "universal_gimmick_maps"]]
+tile_set = SubResource("TileSet_j0p4r")
+format = 2
+layer_0/z_index = 10
+script = ExtResource("3_sro4x")

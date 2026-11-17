@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cd2q21j0khgm3"]
+
+[ext_resource type="Script" uid="uid://bjr3snbnp6vrt" path="res://scripts/main_menu.gd" id="1_087yy"]
+[ext_resource type="Texture2D" uid="uid://da4fkqr85tbft" path="res://assests/tileset/thumbnail.png" id="1_gwoae"]
+[ext_resource type="FontFile" uid="uid://cs07xpk5abm6n" path="res://assests/font/silkscreen/Silkscreen-Bold.ttf" id="1_mujtq"]
+
+[node name="MainMenu" type="Control" unique_id=1189142706]
+custom_minimum_size = Vector2(2560, 1600)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_087yy")
+
+[node name="Thumbnail" type="Sprite2D" parent="." unique_id=452684854]
+position = Vector2(1280, 800)
+texture = ExtResource("1_gwoae")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1467844353]
+custom_minimum_size = Vector2(2560, 1600)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect" unique_id=569998889]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 29.0
+offset_right = 2560.0
+offset_bottom = 846.0
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer2" unique_id=787297378]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_mujtq")
+theme_override_font_sizes/font_size = 150
+text = "SLIDING"
+
+[node name="Label2" type="Label" parent="ColorRect/VBoxContainer2" unique_id=484444692]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_mujtq")
+theme_override_font_sizes/font_size = 160
+text = "Cubertronic
+"
+
+[node name="MenuButtons" type="VBoxContainer" parent="ColorRect" unique_id=1375439359]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = 544.0
+offset_top = 626.0
+offset_right = 1283.0
+offset_bottom = 1166.0
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 60
+
+[node name="PlayButton" type="Button" parent="ColorRect/MenuButtons" unique_id=129971455]
+custom_minimum_size = Vector2(20, 140)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_mujtq")
+theme_override_font_sizes/font_size = 60
+text = "Play"
+
+[node name="SettingButton" type="Button" parent="ColorRect/MenuButtons" unique_id=558324494]
+custom_minimum_size = Vector2(20, 140)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_mujtq")
+theme_override_font_sizes/font_size = 60
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="ColorRect/MenuButtons" unique_id=1426221380]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_mujtq")
+theme_override_font_sizes/font_size = 60
+text = "Quit"
+
+[connection signal="pressed" from="ColorRect/MenuButtons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="ColorRect/MenuButtons/SettingButton" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="ColorRect/MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://de74gekxxjvxi"]
+
+[ext_resource type="Texture2D" uid="uid://dc0w3ms30dd8g" path="res://assests/gimmicks/switch.png" id="1_n2ofc"]
+[ext_resource type="Script" uid="uid://demxwsmnaeu5g" path="res://scripts/switch.gd" id="2_68duk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68duk"]
+texture = ExtResource("1_n2ofc")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2gxhn"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_68duk")
+
+[node name="switch" type="TileMap" unique_id=529689296 groups=["gimmick_maps"]]
+tile_set = SubResource("TileSet_2gxhn")
+format = 2
+script = ExtResource("2_68duk")

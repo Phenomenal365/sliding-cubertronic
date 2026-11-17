@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://2q7qobwujyhj"]
+
+[ext_resource type="Texture2D" uid="uid://bmyc3hsq3c2y" path="res://assests/gimmicks/power_box.png" id="1_a0ivc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lyf7y"]
+texture = ExtResource("1_a0ivc")
+texture_region_size = Vector2i(64, 64)
+0:1/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_b3e3b"]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_lyf7y")
+
+[node name="power_box" type="TileMap" unique_id=1950411739]
+tile_set = SubResource("TileSet_b3e3b")
+format = 2

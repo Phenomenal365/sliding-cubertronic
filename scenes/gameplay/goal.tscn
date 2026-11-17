@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bsx6x3v81xnrf"]
+
+[ext_resource type="Texture2D" uid="uid://cfhom7rtld1gj" path="res://assests/tileset/goal.png" id="1_qwphr"]
+[ext_resource type="Script" uid="uid://dhmmpfb2u7sne" path="res://scripts/goal.gd" id="2_xvr3c"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkyvb"]
+texture = ExtResource("1_qwphr")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tjs6d"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_lkyvb")
+
+[node name="goal" type="TileMap" unique_id=488088439 groups=["gimmick_maps"]]
+tile_set = SubResource("TileSet_tjs6d")
+format = 2
+script = ExtResource("2_xvr3c")

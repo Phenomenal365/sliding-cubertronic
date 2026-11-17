@@ -1,0 +1,348 @@
+[gd_scene format=3 uid="uid://55h1feb26303"]
+
+[ext_resource type="FontFile" uid="uid://cs07xpk5abm6n" path="res://assests/font/silkscreen/Silkscreen-Bold.ttf" id="1_rpxmp"]
+[ext_resource type="Script" uid="uid://chdxek3x2ugon" path="res://scripts/settings_scene.gd" id="1_sa0ag"]
+[ext_resource type="FontFile" uid="uid://dxpgd47oxls4i" path="res://assests/font/silkscreen/Silkscreen-Regular.ttf" id="2_flni0"]
+[ext_resource type="Script" uid="uid://clbyb3w8scfb0" path="res://scripts/volume_slider.gd" id="4_yux15"]
+[ext_resource type="Script" uid="uid://na8xyrj8hfw3" path="res://scripts/fps_button.gd" id="5_3qqtd"]
+[ext_resource type="Script" uid="uid://d31bl6dh2ja4u" path="res://scripts/screen_mode_button.gd" id="6_xc8x5"]
+[ext_resource type="Script" uid="uid://bj11ji6ibkw3" path="res://scripts/reset_button.gd" id="7_e67r1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flni0"]
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sa0ag"]
+bg_color = Color(0.8980392, 0.8980392, 0.8980392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_right = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yux15"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_right = 8.0
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_yux15"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_3qqtd"]
+
+[node name="SettingsScence" type="Control" unique_id=449693189]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sa0ag")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1275766411]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1596667271]
+custom_minimum_size = Vector2(2560, 1600)
+anchors_preset = -1
+color = Color(0.19607843, 0.19607843, 0.19607843, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1298343753]
+offset_right = 2560.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("1_rpxmp")
+theme_override_font_sizes/font_size = 180
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=878062797]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -896.0
+offset_top = -544.0
+offset_right = 896.0
+offset_bottom = 544.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=962842561]
+offset_left = 512.0
+offset_top = 352.0
+offset_right = 896.0
+offset_bottom = 512.0
+theme_override_fonts/font = ExtResource("2_flni0")
+theme_override_font_sizes/font_size = 80
+text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Volume_index_label" type="Label" parent="CanvasLayer" unique_id=1984551568]
+offset_left = 1888.0
+offset_top = 352.0
+offset_right = 2016.0
+offset_bottom = 512.0
+theme_override_fonts/font = ExtResource("2_flni0")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="CanvasLayer" unique_id=217313543]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 928.00006
+offset_top = 352.0
+offset_right = 1226.6667
+offset_bottom = 405.33334
+scale = Vector2(3, 3)
+size_flags_horizontal = 3
+theme_override_constants/grabber_offset = 0
+theme_override_styles/slider = SubResource("StyleBoxFlat_flni0")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_sa0ag")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_yux15")
+max_value = 1.0
+step = 0.01
+value = 0.7
+script = ExtResource("4_yux15")
+
+[node name="Label3" type="Label" parent="CanvasLayer" unique_id=1398166069]
+offset_left = 512.0
+offset_top = 608.0
+offset_right = 922.0
+offset_bottom = 768.0
+theme_override_fonts/font = ExtResource("2_flni0")
+theme_override_font_sizes/font_size = 80
+text = "Max FPS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fps_button" type="Control" parent="CanvasLayer" unique_id=1500829835]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 96.0
+offset_right = 136.0
+offset_bottom = 40.0
+script = ExtResource("5_3qqtd")
+
+[node name="30fps" type="CheckButton" parent="CanvasLayer/fps_button" unique_id=1545594445]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 896.0
+offset_top = 576.0
+offset_right = 949.3334
+offset_bottom = 672.0
+scale = Vector2(3, 3)
+size_flags_horizontal = 3
+button_group = SubResource("ButtonGroup_yux15")
+
+[node name="60fps" type="CheckButton" parent="CanvasLayer/fps_button" unique_id=1621136772]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 1152.0
+offset_top = 576.0
+offset_right = 1205.3334
+offset_bottom = 672.0
+scale = Vector2(3, 3)
+size_flags_horizontal = 3
+button_group = SubResource("ButtonGroup_yux15")
+
+[node name="90fps" type="CheckButton" parent="CanvasLayer/fps_button" unique_id=518314103]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 1408.0
+offset_top = 576.0
+offset_right = 1461.3333
+offset_bottom = 672.0
+scale = Vector2(3, 3)
+size_flags_horizontal = 3
+button_group = SubResource("ButtonGroup_yux15")
+
+[node name="120fps" type="CheckButton" parent="CanvasLayer/fps_button" unique_id=1143312556]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 1664.0001
+offset_top = 576.0
+offset_right = 1717.3334
+offset_bottom = 672.0
+scale = Vector2(3, 3)
+size_flags_horizontal = 3
+button_group = SubResource("ButtonGroup_yux15")
+
+[node name="30Fps_index_label" type="Label" parent="CanvasLayer" unique_id=1611722834]
+offset_left = 992.0
+offset_top = 576.0
+offset_right = 1184.0
+offset_bottom = 736.0
+theme_override_fonts/font = ExtResource("2_flni0")
+theme_override_font_sizes/font_size = 50
+text = "30Fps"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="60Fps_index_label" type="Label" parent="CanvasLayer" unique_id=1295047292]
+offset_left = 1248.0
+offset_top = 576.0
+offset_right = 1440.0
+offset_bottom = 736.0
+theme_override_fonts/font = ExtResource("2_flni0")
+theme_override_font_sizes/font_size = 50
+text = "60Fps"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="90Fps_index_label" type="Label" parent="CanvasLayer" unique_id=1693335351]
+offset_left = 1504.0
+offset_top = 576.0
+offset_right = 1696.0
+offset_bottom = 736.0
+theme_override_fonts/font = ExtResource("2_flni0")
+theme_override_font_sizes/font_size = 50
+text = "90Fps"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="120Fps_index_label" type="Label" parent="CanvasLayer" unique_id=1923154128]
+offset_left = 1760.0
+offset_top = 576.0
+offset_right = 1984.0
+offset_bottom = 736.0
+theme_override_fonts/font = ExtResource("2_flni0")
+theme_override_font_sizes/font_size = 50
+text = "120Fps"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1128226607]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -192.0
+offset_right = 192.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_rpxmp")
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+
+[node name="Label4" type="Label" parent="CanvasLayer" unique_id=1273886730]
+offset_left = 512.0
+offset_top = 864.0
+offset_right = 1088.0
+offset_bottom = 1024.0
+theme_override_fonts/font = ExtResource("2_flni0")
+theme_override_font_sizes/font_size = 80
+text = "Fullscreen"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="CanvasLayer" unique_id=674963982]
+offset_left = 1408.0
+offset_top = 864.0
+offset_right = 2048.0
+offset_bottom = 1024.0
+theme_override_fonts/font = ExtResource("2_flni0")
+theme_override_font_sizes/font_size = 80
+text = "MAX Window"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="screen_mode_button" type="Control" parent="CanvasLayer" unique_id=1778253475]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_xc8x5")
+
+[node name="fullscreen_mode" type="CheckButton" parent="CanvasLayer/screen_mode_button" unique_id=1679030500]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 1056.0
+offset_top = 864.0
+offset_right = 1109.3333
+offset_bottom = 928.00006
+scale = Vector2(3, 3)
+size_flags_horizontal = 3
+button_group = SubResource("ButtonGroup_3qqtd")
+
+[node name="windowed_mode" type="CheckButton" parent="CanvasLayer/screen_mode_button" unique_id=985609925]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 1280.0
+offset_top = 864.0
+offset_right = 1333.3333
+offset_bottom = 928.0
+scale = Vector2(3, 3)
+size_flags_horizontal = 3
+button_group = SubResource("ButtonGroup_3qqtd")
+
+[node name="reset_button" type="Button" parent="CanvasLayer" unique_id=681798982]
+offset_left = 736.0
+offset_top = 1120.0
+offset_right = 1824.0
+offset_bottom = 1248.0
+theme_override_fonts/font = ExtResource("1_rpxmp")
+theme_override_font_sizes/font_size = 80
+text = "Reset Progress"
+script = ExtResource("7_e67r1")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=721640904]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=1949503291]
+custom_minimum_size = Vector2(2560, 1600)
+anchors_preset = -1
+offset_right = 2560.0
+offset_bottom = 1600.0
+color = Color(0.19607843, 0.19607843, 0.19607843, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer2" unique_id=1277960325]
+offset_left = 384.0
+offset_top = 256.0
+offset_right = 2176.0
+offset_bottom = 1344.0
+
+[node name="Label" type="Label" parent="CanvasLayer2" unique_id=366082612]
+offset_left = 384.0
+offset_top = 448.0
+offset_right = 2176.0
+offset_bottom = 763.0
+theme_override_fonts/font = ExtResource("1_rpxmp")
+theme_override_font_sizes/font_size = 80
+text = "Do you want to reset all 
+your progress and start 
+over ?"
+horizontal_alignment = 1
+
+[node name="Yes_button" type="Button" parent="CanvasLayer2" unique_id=1386422809]
+offset_left = 736.0
+offset_top = 928.0
+offset_right = 1088.0
+offset_bottom = 1088.0
+theme_override_fonts/font = ExtResource("1_rpxmp")
+theme_override_font_sizes/font_size = 80
+text = "Yes"
+
+[node name="No_button" type="Button" parent="CanvasLayer2" unique_id=592836547]
+offset_left = 1472.0
+offset_top = 928.0
+offset_right = 1824.0
+offset_bottom = 1088.0
+theme_override_fonts/font = ExtResource("1_rpxmp")
+theme_override_font_sizes/font_size = 80
+text = "No"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/reset_button" to="CanvasLayer/reset_button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Yes_button" to="CanvasLayer/reset_button" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/No_button" to="CanvasLayer/reset_button" method="_on_no_button_pressed"]

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dbw4y6n8b6dtg"]
+
+[ext_resource type="Texture2D" uid="uid://bdtq0iw80ii6o" path="res://assests/gimmicks/teleport_blue-1.png.png" id="1_rrgbl"]
+[ext_resource type="Texture2D" uid="uid://6mk0p3nkmhp0" path="res://assests/gimmicks/teleport_red-2.png.png" id="2_fchkk"]
+[ext_resource type="Script" uid="uid://ddk166awn3xcv" path="res://scripts/teleport.gd" id="3_fchkk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_71ybc"]
+texture = ExtResource("1_rrgbl")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ur04j"]
+texture = ExtResource("2_fchkk")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_04ykm"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_71ybc")
+sources/1 = SubResource("TileSetAtlasSource_ur04j")
+
+[node name="teleport" type="TileMap" unique_id=226772260 groups=["gimmick_maps"]]
+tile_set = SubResource("TileSet_04ykm")
+format = 2
+script = ExtResource("3_fchkk")

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bnip8fti8a12f"]
+
+[ext_resource type="Texture2D" uid="uid://mgmsifti3kis" path="res://assests/gimmicks/glue-1.png.png" id="1_0qu58"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dyey6"]
+texture = ExtResource("1_0qu58")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3i3jt"]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_dyey6")
+
+[node name="stop" type="TileMap" unique_id=660090726]
+tile_set = SubResource("TileSet_3i3jt")
+format = 2

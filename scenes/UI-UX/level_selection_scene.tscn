@@ -1,0 +1,526 @@
+[gd_scene format=3 uid="uid://chenfk0rj4mfx"]
+
+[ext_resource type="Script" uid="uid://ba2pghd80gyk4" path="res://scripts/level_selection_scence.gd" id="1_033cp"]
+[ext_resource type="FontFile" uid="uid://cs07xpk5abm6n" path="res://assests/font/silkscreen/Silkscreen-Bold.ttf" id="2_4g8hg"]
+
+[node name="LevelSelectionScence" type="Control" unique_id=907280499]
+custom_minimum_size = Vector2(2560, 1600)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_033cp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1186328127]
+custom_minimum_size = Vector2(2560, 1600)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19607843, 0.19607843, 0.19607843, 1)
+
+[node name="BackButton" type="Button" parent="ColorRect" unique_id=466787483]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_right = 279.0
+offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 60
+text = "Back"
+
+[node name="Part1Button" type="Button" parent="ColorRect" unique_id=1884212712]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -279.0
+offset_bottom = 159.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 60
+text = "<<"
+
+[node name="Part2Button" type="Button" parent="ColorRect" unique_id=1069180731]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -279.0
+offset_bottom = 159.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 60
+text = ">>"
+
+[node name="GridPart1" type="GridContainer" parent="ColorRect" unique_id=580386976]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1152.0
+offset_top = -526.0
+offset_right = 1148.0
+offset_bottom = 974.0
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 60
+columns = 6
+
+[node name="Button" type="Button" parent="ColorRect/GridPart1" unique_id=896996384]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "1"
+
+[node name="Button2" type="Button" parent="ColorRect/GridPart1" unique_id=85573946]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "2"
+
+[node name="Button3" type="Button" parent="ColorRect/GridPart1" unique_id=1325280776]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "3"
+
+[node name="Button4" type="Button" parent="ColorRect/GridPart1" unique_id=2096447477]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "4"
+
+[node name="Button5" type="Button" parent="ColorRect/GridPart1" unique_id=1389480981]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "5"
+
+[node name="Button6" type="Button" parent="ColorRect/GridPart1" unique_id=316183007]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "6"
+
+[node name="Button7" type="Button" parent="ColorRect/GridPart1" unique_id=1816071536]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "7"
+
+[node name="Button8" type="Button" parent="ColorRect/GridPart1" unique_id=933168628]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "8"
+
+[node name="Button9" type="Button" parent="ColorRect/GridPart1" unique_id=1867794714]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "9"
+
+[node name="Button10" type="Button" parent="ColorRect/GridPart1" unique_id=1039390184]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "10"
+
+[node name="Button11" type="Button" parent="ColorRect/GridPart1" unique_id=184095386]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "11"
+
+[node name="Button12" type="Button" parent="ColorRect/GridPart1" unique_id=464301499]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "12"
+
+[node name="Button13" type="Button" parent="ColorRect/GridPart1" unique_id=163506707]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "13"
+
+[node name="Button14" type="Button" parent="ColorRect/GridPart1" unique_id=1344768287]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "14"
+
+[node name="Button15" type="Button" parent="ColorRect/GridPart1" unique_id=379481725]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "15"
+
+[node name="Button16" type="Button" parent="ColorRect/GridPart1" unique_id=376990393]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "16"
+
+[node name="Button17" type="Button" parent="ColorRect/GridPart1" unique_id=1061028593]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "17"
+
+[node name="Button18" type="Button" parent="ColorRect/GridPart1" unique_id=1006338676]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "18"
+
+[node name="Button19" type="Button" parent="ColorRect/GridPart1" unique_id=1134777521]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "19"
+
+[node name="Button20" type="Button" parent="ColorRect/GridPart1" unique_id=44623934]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "20"
+
+[node name="Button21" type="Button" parent="ColorRect/GridPart1" unique_id=1721705229]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "21"
+
+[node name="Button22" type="Button" parent="ColorRect/GridPart1" unique_id=523102270]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "22"
+
+[node name="Button23" type="Button" parent="ColorRect/GridPart1" unique_id=1624518920]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "23"
+
+[node name="Button24" type="Button" parent="ColorRect/GridPart1" unique_id=1360640584]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "24"
+
+[node name="Button25" type="Button" parent="ColorRect/GridPart1" unique_id=2126113668]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "25"
+
+[node name="Button26" type="Button" parent="ColorRect/GridPart1" unique_id=2051544618]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "26"
+
+[node name="Button27" type="Button" parent="ColorRect/GridPart1" unique_id=736861772]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "27"
+
+[node name="Button28" type="Button" parent="ColorRect/GridPart1" unique_id=242256455]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "28"
+
+[node name="Button29" type="Button" parent="ColorRect/GridPart1" unique_id=817409363]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "29"
+
+[node name="Button30" type="Button" parent="ColorRect/GridPart1" unique_id=1801170275]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "30"
+
+[node name="GridPart2" type="GridContainer" parent="ColorRect" unique_id=2101752101]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -995.0
+offset_top = -526.0
+offset_right = 995.0
+offset_bottom = 800.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 60
+columns = 6
+
+[node name="Button" type="Button" parent="ColorRect/GridPart2" unique_id=2043055270]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "31"
+
+[node name="Button2" type="Button" parent="ColorRect/GridPart2" unique_id=897236377]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "32"
+
+[node name="Button3" type="Button" parent="ColorRect/GridPart2" unique_id=444021930]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "33"
+
+[node name="Button4" type="Button" parent="ColorRect/GridPart2" unique_id=1782881647]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "34"
+
+[node name="Button5" type="Button" parent="ColorRect/GridPart2" unique_id=1832817137]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "35"
+
+[node name="Button6" type="Button" parent="ColorRect/GridPart2" unique_id=1182415624]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "36"
+
+[node name="Button7" type="Button" parent="ColorRect/GridPart2" unique_id=1933765832]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "37"
+
+[node name="Button8" type="Button" parent="ColorRect/GridPart2" unique_id=1007798896]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "38"
+
+[node name="Button9" type="Button" parent="ColorRect/GridPart2" unique_id=74073043]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "39"
+
+[node name="Button10" type="Button" parent="ColorRect/GridPart2" unique_id=516486924]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "40"
+
+[node name="Button11" type="Button" parent="ColorRect/GridPart2" unique_id=914709057]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "41"
+
+[node name="Button12" type="Button" parent="ColorRect/GridPart2" unique_id=126376907]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "42"
+
+[node name="Button13" type="Button" parent="ColorRect/GridPart2" unique_id=666276210]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "43"
+
+[node name="Button14" type="Button" parent="ColorRect/GridPart2" unique_id=1910966324]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "44"
+
+[node name="Button15" type="Button" parent="ColorRect/GridPart2" unique_id=2034186231]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "45"
+
+[node name="Button16" type="Button" parent="ColorRect/GridPart2" unique_id=780326227]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "46"
+
+[node name="Button17" type="Button" parent="ColorRect/GridPart2" unique_id=2120764654]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "47"
+
+[node name="Button18" type="Button" parent="ColorRect/GridPart2" unique_id=519015778]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "48"
+
+[node name="Button19" type="Button" parent="ColorRect/GridPart2" unique_id=1705989330]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "49"
+
+[node name="Button20" type="Button" parent="ColorRect/GridPart2" unique_id=1021035494]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "50"
+
+[node name="Button21" type="Button" parent="ColorRect/GridPart2" unique_id=1262476039]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "51"
+
+[node name="Button22" type="Button" parent="ColorRect/GridPart2" unique_id=1135939710]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "52"
+
+[node name="Button23" type="Button" parent="ColorRect/GridPart2" unique_id=804676647]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "53"
+
+[node name="Button24" type="Button" parent="ColorRect/GridPart2" unique_id=2002413472]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "54"
+
+[node name="Button25" type="Button" parent="ColorRect/GridPart2" unique_id=1187440844]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "55"
+
+[node name="Button26" type="Button" parent="ColorRect/GridPart2" unique_id=161976527]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "56"
+
+[node name="Button27" type="Button" parent="ColorRect/GridPart2" unique_id=2023984745]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "57"
+
+[node name="Button28" type="Button" parent="ColorRect/GridPart2" unique_id=590770839]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "58"
+
+[node name="Button29" type="Button" parent="ColorRect/GridPart2" unique_id=470650322]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "59"
+
+[node name="Button30" type="Button" parent="ColorRect/GridPart2" unique_id=2135726025]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 80
+text = "60"
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=77913052]
+layout_mode = 0
+offset_top = 31.0
+offset_right = 2558.0
+offset_bottom = 216.0
+theme_override_fonts/font = ExtResource("2_4g8hg")
+theme_override_font_sizes/font_size = 120
+text = "LEVEL SELECTION"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="ColorRect/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="ColorRect/Part1Button" to="." method="_on_part_1_button_pressed"]
+[connection signal="pressed" from="ColorRect/Part2Button" to="." method="_on_part_2_button_pressed"]

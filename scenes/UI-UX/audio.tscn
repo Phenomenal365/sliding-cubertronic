@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bkfkjhu5pa3g6"]
+
+[ext_resource type="Script" uid="uid://cw50g8lppwfyf" path="res://scripts/audio.gd" id="1_7wqn7"]
+[ext_resource type="AudioStream" uid="uid://cj1m16lta1wn7" path="res://assests/audio/moving.mp3" id="1_tc84m"]
+[ext_resource type="AudioStream" uid="uid://7bnq33afigiy" path="res://assests/audio/button_click.mp3" id="2_7wqn7"]
+[ext_resource type="AudioStream" uid="uid://whusibra72gm" path="res://assests/audio/win.mp3" id="4_errmx"]
+[ext_resource type="AudioStream" uid="uid://blbqhvbrhrfjd" path="res://assests/audio/game_over.mp3" id="5_w5a3c"]
+[ext_resource type="AudioStream" uid="uid://bs3uhst2nnie0" path="res://assests/audio/teleporting.mp3" id="6_p4kh2"]
+[ext_resource type="AudioStream" uid="uid://w5lm7mcd4bxq" path="res://assests/audio/appear.mp3" id="7_c3q4p"]
+[ext_resource type="AudioStream" uid="uid://de2ty28hnv8um" path="res://assests/audio/unlocking.mp3" id="8_c3q4p"]
+[ext_resource type="AudioStream" uid="uid://bm06s0ohlfu6n" path="res://assests/audio/power_off.mp3" id="9_4t78l"]
+[ext_resource type="AudioStream" uid="uid://ja4d0twu2tu5" path="res://assests/audio/activate.mp3" id="10_0p5iy"]
+[ext_resource type="AudioStream" uid="uid://rtpi261owsgq" path="res://assests/audio/screen_slide.mp3" id="11_0p5iy"]
+
+[node name="Audio" type="Node" unique_id=1900799234]
+script = ExtResource("1_7wqn7")
+
+[node name="moving_sound" type="AudioStreamPlayer" parent="." unique_id=473819576]
+stream = ExtResource("1_tc84m")
+volume_db = 5.0
+
+[node name="button_click_sound" type="AudioStreamPlayer" parent="." unique_id=970221073]
+stream = ExtResource("2_7wqn7")
+volume_db = 5.0
+
+[node name="win_sound" type="AudioStreamPlayer" parent="." unique_id=1063641187]
+stream = ExtResource("4_errmx")
+volume_db = -5.0
+
+[node name="game_over_sound" type="AudioStreamPlayer" parent="." unique_id=550818148]
+stream = ExtResource("5_w5a3c")
+volume_db = -10.0
+
+[node name="teleporting_sound" type="AudioStreamPlayer" parent="." unique_id=1923735431]
+stream = ExtResource("6_p4kh2")
+volume_db = -10.0
+
+[node name="appear_sound" type="AudioStreamPlayer" parent="." unique_id=2131331963]
+stream = ExtResource("7_c3q4p")
+volume_db = -10.0
+
+[node name="unlocking_sound" type="AudioStreamPlayer" parent="." unique_id=668256548]
+stream = ExtResource("8_c3q4p")
+volume_db = 5.0
+
+[node name="power_off_sound" type="AudioStreamPlayer" parent="." unique_id=975932817]
+stream = ExtResource("9_4t78l")
+volume_db = -5.0
+
+[node name="activate_sound" type="AudioStreamPlayer" parent="." unique_id=1439676585]
+stream = ExtResource("10_0p5iy")
+
+[node name="screen_slide_sound" type="AudioStreamPlayer" parent="." unique_id=1120339077]
+stream = ExtResource("11_0p5iy")
+volume_db = -5.0

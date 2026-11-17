@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cpkb738le4ohk"]
+
+[ext_resource type="Texture2D" uid="uid://b1818xyw47qx5" path="res://assests/gimmicks/landing_blue-1.png.png" id="1_3pvjn"]
+[ext_resource type="Texture2D" uid="uid://bga5aw1mk1tmr" path="res://assests/gimmicks/landing_red-2.png.png" id="2_ppiy5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mba0w"]
+texture = ExtResource("1_3pvjn")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjs4a"]
+texture = ExtResource("2_ppiy5")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_x60od"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_mba0w")
+sources/1 = SubResource("TileSetAtlasSource_rjs4a")
+
+[node name="landing" type="TileMap" unique_id=1122878269]
+tile_set = SubResource("TileSet_x60od")
+format = 2
